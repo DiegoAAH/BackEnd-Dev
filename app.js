@@ -8,3 +8,9 @@ function saludar(nombre) {
 }
 
 console.log(saludar('Diego'));
+
+function despedir(nombre) {
+    return `Adios, ${nombre}. Hasta la proxima!`;
+}
+
+console.log(despedir('Diego'));
