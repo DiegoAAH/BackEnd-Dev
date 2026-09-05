@@ -83,6 +83,36 @@ En resumen: `clone` es "bajar el proyecto por primera vez", `pull` es "traer lo 
 
 Porque `git commit` solo guarda los cambios en el historial **local** de tu computadora; en ningún momento se comunica con el servidor remoto. Para que esos commits sean visibles en GitHub hace falta un paso adicional explícito: `git push`, que sube el historial local al repositorio remoto. Esta separación es intencional: te permite hacer commits, corregirlos o reorganizarlos localmente antes de decidir qué compartir con los demás.
 
+## Instalación y configuración
+
+- **Sistema operativo:** _(completa: Windows 11)_
+- **Versión de Git instalada:**
+  ```bash
+  $ git --version
+  git version 2.55.0.windows.5
+  ```
+- **Configuración de identidad:**
+  ```bash
+  git config --global user.name "DiegoAAH"
+  git config --global user.email "diegoalva577@gmail.com"
+  ```
+  Esto asocia tu nombre y correo a cada commit que hagas, para que quede registrado quién hizo cada cambio.
+
+## Prueba de clonado (verificación del repositorio remoto)
+
+Para comprobar que el repositorio publicado en GitHub contiene todo el historial y funciona de forma independiente:
+
+```bash
+cd ..
+mkdir prueba-clon && cd prueba-clon
+git clone https://github.com/DiegoAAH/BackEnd-Dev.git
+cd BackEnd-Dev
+git log --oneline
+node app.js
+```
+
+Resultado: el `git log --oneline` mostró los mismos commits que en el repositorio original (incluyendo el merge de `feature/calculadora`), y `node app.js` ejecutó correctamente, confirmando que el clon es una copia completa y funcional del proyecto.
+
 ## Comandos usados en esta práctica
 
 ```bash
