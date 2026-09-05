@@ -23,5 +23,5 @@ function restar(a, b) {
     return a - b;
 }
 
-console.log(`3 + 5 = ${sumar(3, 5)}`);
+console.log(`7 + 0 = ${sumar(7, 0)}`);
 console.log(`10 - 4 = ${restar(10, 4)}`);
